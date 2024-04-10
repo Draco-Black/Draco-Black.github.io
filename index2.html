@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Include Font Awesome for the back arrow icon -->
+    <link rel="stylesheet" href="styles2.css">
+    <script src="script2.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="https://logowik.com/content/uploads/images/dribbble.jpg" alt="Dribble Logo" class="logo">
+        <div class="back-box">
+            <div class="backarrow" onclick="goBack()">
+                <a href="index1.html"><i class="fas fa-angle-left"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="cent">
+        <div class="txt">
+            <h1>What brings you to Dribbble?</h1>
+            <p>Select the option(s) that best describe you. Don't worry, you can explore other options later.</p>
+        </div>
+        <div class="collect">
+            <div class="option" onclick="toggleSelection(this)">
+                <img src="blob.jpeg" alt="Designer">
+                <h4>I'm a designer looking to share my work</h4>
+                <p>With over 7 million shots from a vast community of designers, Dribble is the leading source for
+                    desing inspiration.</p>
+                <div class="button"></div>
+                <div class="tick"><i class="fas fa-check"></i></div>
+                <br>
+            </div>
+            <div class="option" onclick="toggleSelection(this)">
+                <img src="hire.jpeg" alt="Hire">
+                <h4>I'm looking to hire a designer</h4>
+                <p>With over 7 million shots from a vast community of designers, Dribble is the leading source for
+                    desing inspiration.</p>
+                <div class="button"></div>
+                <div class="tick"><i class="fas fa-check"></i></div>
+                <br>
+            </div>
+            <div class="option" onclick="toggleSelection(this)">
+                <img src="inspiration.jpeg" alt="Inspiration">
+                <h4>I'm looking for design inspiration</h4>
+                <p>With over 7 million shots from a vast community of designers, Dribble is the leading source for
+                    desing inspiration.</p>
+                <div class="button"></div>
+                <div class="tick"><i class="fas fa-check"></i></div>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div class="end">
+        <div class="multiselect-text"><b>Anything else? You can select multiple</b></div>
+        <button id="finishButton" onclick="finishSelection()">Finish</button>
+        <div class="multiselect-text2" style="display: none;">
+            <p style="color: rgba(171, 171, 171, 0.6)">or press RETURN</p>
+        </div>
+    </div>
+</body>
+
+</html>

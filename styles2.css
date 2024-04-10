@@ -1,0 +1,260 @@
+        body {
+            background-color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: #2D3748;
+            margin: 0px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #4A5568;
+            margin-bottom: 10px;
+        }
+
+        .collect {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            /* Center-align the divs */
+        }
+
+        .collect>div {
+            width: 200px;
+            /* Set width of inner divs to 200px */
+        }
+
+        .end {
+            margin-bottom: 50px;
+        }
+
+        .option {
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            margin: 20px;
+            margin-top: 90px;
+            padding: 20px;
+            /* display: inline-block; */
+            width: 200px;
+            /* Reverted to original width */
+            height: 220px;
+            /* Added fixed height */
+            /* box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);  */
+            overflow: visible;
+            position: relative;
+            cursor: pointer;
+            border: 2px solid #dedcdc7f;
+        }
+
+        .option.selected {
+            border: 2px solid #ED64A6;
+        }
+
+        .option:hover {
+            outline: 2px solid #ED64A6;
+        }
+
+        .option img {
+            width: 100%;
+            height: 60%;
+            /* Set the height to 100% to maintain aspect ratio */
+            transition: transform 0.3s ease-in-out;
+            mix-blend-mode: multiply;
+        }
+
+        .option:hover img {
+            transform: scale(1.2) translateY(-70px);
+            z-index: 5;
+        }
+
+        .option .button {
+            position: absolute;
+            bottom: 20px;
+            /* Adjusted position */
+            left: 50%;
+            /* Centered horizontally */
+            transform: translateX(-50%);
+            /* Centered horizontally */
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #FFFFFF;
+            border: 2px solid #ED64A6;
+        }
+
+        .option.selected .button {
+            background-color: #ED64A6;
+        }
+
+        .tick {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #ED64A6;
+            color: #FFFFFF;
+            display: none;
+            pointer-events: none;
+            /* Ensure the tick icon does not interfere with clicking */
+        }
+
+        .option.selected .tick {
+            display: block;
+        }
+
+        button.active {
+            background-color: #ED64A6;
+            color: #FFFFFF;
+            border: none;
+            padding: 10px 80px;
+            border-radius: 8px;
+            /* Reverted to original border radius */
+            margin-top: 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .left-side {
+            width: auto;
+            display: block;
+            margin-bottom: 150px;
+        }
+
+        .cent {
+            width: auto;
+            display: block;
+            margin-bottom: 80px;
+        }
+
+        .back-box {
+            width: 50px;
+            height: 50px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            /* Center vertically */
+            justify-content: center;
+            z-index: 9999;
+            /* Ensuring the back button stays on top */
+            cursor: pointer;
+        }
+
+        .backarrow {
+            font-size: 20px;
+            color: #2D3748;
+        }
+
+        .container {
+            display: flex;
+            /* Using flexbox */
+            justify-content: flex-start;
+            /* Align items to the left */
+            vertical-align: middle;
+            align-items: center;
+            width: 100%;
+            /* Cover the entire width of the page */
+            gap: 20px;
+            /* Gap between the logo and the arrow */
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+
+        .logo {
+            width: 120px;
+            mix-blend-mode: multiply;
+        }
+
+        .multiselect-text {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #4A5568;
+            display: none;
+        }
+
+        .option.selected~.multiselect-text {
+            display: block;
+        }
+
+        .option h4 {
+            position: absolute;
+            top: 50%;
+            /* Initial position, slightly lower than center */
+            left: 50%;
+            /* Centered horizontally */
+            transform: translateX(-50%);
+            /* Centered horizontally */
+            z-index: 2;
+            padding: 10px;
+            border-radius: 5px;
+            width: 90%;
+            transition: top 0.4s ease-in-out;
+            /* Smooth transition for top */
+            background-color: #FFFFFF;
+        }
+
+        .option:hover h4 {
+            top: 20%;
+            /* Move h4 upwards to the center */
+        }
+
+        .option p {
+            display: none;
+            position: absolute;
+            top: 90%;
+            /* Initially positioned below the center */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            /* Ensure p tag is behind h4 */
+            padding: 10px;
+            border-radius: 5px;
+            width: 90%;
+            transition: top 0.4s ease-in-out;
+            /* Smooth transition for top */
+            font-size: small;
+        }
+
+        .option:hover p {
+            display: block;
+            top: 44%;
+            /* Move p tag to the center */
+        }
+
+        .cent h1 {
+            font-size: 30px;
+            /* Increase font size */
+            font-weight: 800;
+            /* Increase font weight */
+        }
+
+        button:not(.active) {
+            pointer-events: none;
+            border: none;
+            padding: 10px 80px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .txt {
+            width: 85%;
+            margin: auto;
+        }
+
+        @media only screen and (max-width: 600px) {
+
+            .collect>div {
+                margin-top: 50px;
+            }
+        }

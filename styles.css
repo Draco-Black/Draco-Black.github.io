@@ -1,0 +1,229 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+    height: 100%;
+}
+
+.split-screen {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.left-side {
+    flex: 0 0 100%;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slogan {
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+    /* Adjust as needed */
+    font-size: 19.5px;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.right-side {
+    background-color: #FFFFFF;
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
+    /* margin-left: 200px; */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+button {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 0px solid #ccc;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 15px;
+
+}
+
+button {
+    background-color: #F948A0;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+}
+
+.already-have-account {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    font-size: 14px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.already-have-account a {
+    text-decoration: none;
+    color: #897CCE;
+    font-weight: bold;
+}
+
+p.last {
+    margin-top: 20px;
+    font-size: 11px;
+    text-align: justify;
+    color: #ccc;
+}
+
+p.tick {
+    font-size: 14px;
+    text-align: center;
+    color: #000000;
+}
+
+.name-username-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: bold;
+}
+
+.name-username-container label {
+    flex: 40%;
+    padding-right: 10px;
+
+}
+
+.email-password-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: bold;
+
+
+}
+
+.name-username-container input[type="text"] {
+    flex: 40%;
+    margin-bottom: 20px;
+}
+
+.formm label {
+    font-weight: bold;
+}
+
+/* Add responsive behavior */
+@media (min-width: 768px) {
+    .split-screen {
+        flex-wrap: nowrap;
+    }
+
+    .left-side {
+        flex: 0 0 35%;
+    }
+
+    .right-side {
+        flex: 0 0 65%;
+    }
+}
+
+.logo {
+    width: 120px;
+    position: absolute;
+    top: 30px;
+    /* Adjust as needed */
+    left: 30px;
+    /* Adjust as needed */
+    z-index: 1;
+    /* Ensure it's above other elements */
+    mix-blend-mode: screen;
+    filter: invert(100%);
+}
+
+/* Mobile First Approach */
+/* Apply styles for screens up to 767px wide */
+@media (max-width: 767px) {
+    .split-screen {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-side,
+    .right-side {
+        flex: 1;
+        width: 100%;
+    }
+
+    .container {
+        width: 70%;
+        margin: 20px auto;
+    }
+
+    .already-have-account {
+        position: static;
+        text-align: center;
+    }
+
+    .name-username-container,
+    .email-password-container {
+        flex-direction: column;
+    }
+
+    .name-username-container label,
+    .email-password-container label {
+        flex: 100%;
+        margin-bottom: 5px;
+    }
+
+    .name-username-container input[type="text"],
+    .email-password-container input[type="text"],
+    .name-username-container input[type="email"],
+    .email-password-container input[type="email"],
+    .name-username-container input[type="password"],
+    .email-password-container input[type="password"] {
+        width: 100%;
+    }
+
+    .tick {
+        margin-top: 10px;
+    }
+
+    .last {
+        font-size: 10px;
+    }
+
+    .logo {
+        width: 80px;
+        top: 10px;
+        left: 10px;
+    }
+}

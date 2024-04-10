@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile Creation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles1.css">
+</head>
+
+<body>
+
+  <img src="https://logowik.com/content/uploads/images/dribbble.jpg" alt="Dribble Logo" class="logo">
+  <div class="container">
+    <div class="heading"><b>Welcome! Let's create your profile</b></div>
+    <br>
+    <div class="subtext">Let others get to know you better! You can do these later</div>
+    <br>
+    <div class="subheading">Add an avatar</div>
+    <div class="avatar-section">
+      <div class="avatar-upload" id="avatarUpload">
+        <i class="fas fa-camera"></i>
+        <img id="avatarImage" src="" alt="Avatar" style="display: none;">
+      </div>
+      <div style="margin-left: 10%;">
+        <button class="img-button" id="chooseImageButton"><b>Choose image</b></button><br><br>
+        <div class="subtext"><button class="button-style" id="toggleDefaultButton"><b> > Or choose one of our
+              defaults</b></button></div>
+        <div id="defaultAvatars">
+          <img class="default-avatar"
+            src="https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg?w=826&t=st=1712645841~exp=1712646441~hmac=01574ab885bbcca78b4474b8572b74db14544d851c59db2d79a450de4badcacf"
+            alt="Avatar 1">
+          <img class="default-avatar"
+            src="https://img.freepik.com/free-psd/3d-render-avatar-character_23-2150611722.jpg?w=826&t=st=1712645862~exp=1712646462~hmac=1605cd482742b5905e4af16339730cdaf014429a4708ef3769c8b90cb7c4e501"
+            alt="Avatar 2">
+          <img class="default-avatar"
+            src="https://img.freepik.com/free-psd/3d-rendering-avatar_23-2150833554.jpg?w=826&t=st=1712645870~exp=1712646470~hmac=997831e842f4cadc802b740c05cb6da8348661d4e889ae512920ddc924c84981"
+            alt="Avatar 3">
+          <img class="default-avatar"
+            src="https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436178.jpg?w=826&t=st=1712646466~exp=1712647066~hmac=5e77914db71cdc6dbe857fc111bd333dd2f056abac885ef54b31013e4b7ea894"
+            alt="Avatar 4">
+          <img class="default-avatar"
+            src="https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?w=826&t=st=1712645880~exp=1712646480~hmac=47170e94f63bb53f07e0cf9d46fbd8d58cf9ad67fd0b16cc9e5075c32d767a19"
+            alt="Avatar 5">
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class="location-input">
+      <label class="subheading" for="location">Add your location</label><br>
+      <br><input type="text" id="location" placeholder="Enter a location">
+    </div>
+    <br><br><br>
+    <button class="next-button" id="nextButton">Next</button>
+    <input type="file" id="imageInput" style="display: none;">
+  </div>
+  <script src="script1.js"></script>
+</body>
+
+</html>
